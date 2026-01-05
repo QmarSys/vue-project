@@ -2,6 +2,7 @@
 const props = defineProps<{ text: string }>()
 let colorClass = 'bg-gray-200 text-gray-800'
 const textArr = props.text.split(' ')
+const mainText = textArr.slice(1).join(' ')
 const proiotyWord = textArr[0]
 if (proiotyWord === '!!!:') {
   colorClass = 'bg-red-200 text-red-800'
@@ -14,6 +15,6 @@ if (proiotyWord === '!!!:') {
 
 <template>
   <div class="p-4 w-full rounded" :class="colorClass">
-    <p>{{ props.text }}</p>
+    <p>{{ mainText }}</p>
   </div>
 </template>

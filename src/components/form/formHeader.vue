@@ -16,6 +16,8 @@ const addItem = () => {
   >
     <input
       v-model="inputText"
+      @keyup.enter="addItem"
+      placeholder="Add new item...(enter to add)"
       class="w-full outline-none border border-gray-300 rounded px-4 py-2"
       type="text"
     />
